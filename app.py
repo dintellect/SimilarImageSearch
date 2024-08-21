@@ -26,8 +26,8 @@ transform = transforms.Compose([
 ])
 
 # Load the Faiss index and image URLs from files
-index = faiss.read_index("faiss_index.index")  # Load the pre-built Faiss index for fast similarity search
-with open('image_urls.pkl', 'rb') as f:
+index = faiss.read_index("data/faiss_index.index")  # Load the pre-built Faiss index for fast similarity search
+with open('data/image_urls.pkl', 'rb') as f:
     image_urls = pickle.load(f)  # Load the list of image URLs corresponding to the index
 
 def load_image(url: str) -> Image.Image:
