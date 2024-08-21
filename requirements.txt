@@ -1,0 +1,9 @@
+Flask==3.0.3
+pillow==9.3.0
+faiss-cpu==1.7.3
+python-multipart==0.0.5
+numpy==1.26.4
+
+# Directly link to the torch and torchvision wheel files
+https://download.pytorch.org/whl/cpu/torch-2.0.0%2Bcpu-cp310-cp310-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torchvision-0.15.0%2Bcpu-cp310-cp310-linux_x86_64.whl
