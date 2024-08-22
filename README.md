@@ -3,7 +3,7 @@
 ## Overview
 This project is a web service that accepts an image URL as input and returns up to 10 images that are most similar to the input image. The web service is built using Flask and utilizes a pre-trained deep learning model (ResNet50) for feature extraction and FAISS (Facebook AI Similarity Search) for efficient similarity search.
 
-The service is containerized using Docker, and the image is optimized to be as small as possible while ensuring all dependencies are met. Additionally, the logic for building the FAISS index and feature extraction is available in a Google Colab notebook.
+The service is containerized using Docker, and the image is optimized to be as small as possible while ensuring all dependencies are met. Additionally, the logic for building the FAISS index and feature extraction is available in a [Google Colab notebook](https://colab.research.google.com/drive/1bi-Tjnd6ph_31-Tu6u8buMVqMuKQ97Ga?usp=drive_link).
 
 ## Features
 **Image Similarity Search:** Takes an image URL as input and returns a list of similar images.
@@ -136,7 +136,7 @@ curl -X POST "http://127.0.0.1:8000/find_similar_images" -H "Content-Type: appli
 - Provide the JSON input as described above.
 - Click "Send" to receive the list of similar images.
 
-## Google Colab Notebook
+## FAISS Index Creation and Feature Extraction (Google Colab Notebook)
 
 For understanding the feature extraction and FAISS index creation, you can refer to the Google Colab notebook:
 
