@@ -8,7 +8,7 @@ The service is containerized using Docker, and the image is optimized to be as s
 ## Features
 **Image Similarity Search:** Takes an image URL as input and returns a list of similar images.
 
-**Pre-trained Model:** Uses ResNet50, a state-of-the-art deep learning model for image feature extraction.
+**Pre-trained Model:** Uses [ResNet50](https://pytorch.org/hub/nvidia_deeplearningexamples_resnet50/), a state-of-the-art deep learning model for image feature extraction.
 
 **Efficient Search with FAISS:** Utilizes FAISS for fast and scalable similarity search.
 
@@ -44,6 +44,28 @@ cd SimilarImageSearch
 
 2. Prepare the Environment
 Ensure you have Python 3.10 installed on your system.
+
+- Run the following command to create a virtual environment.
+
+````
+python3.10 -m venv sim_env
+````
+
+- Activate Environment
+
+````
+source venv/bin/activate
+````
+
+- Install Dependencies in Env
+````
+pip install -r requirements.txt
+````
+
+- Deactivate the Virtual Environment
+````
+deactivate
+````
 
 3. Install Dependencies
 Install the required Python packages using `pip`:
@@ -101,6 +123,11 @@ Example:
   ]
 }
 ````
+
+## Testing with cURL 
+```
+curl -X POST "http://127.0.0.1:8000/find_similar_images" -H "Content-Type: application/json" -d '{"image_url": "http://example.com/image.jpg"}'
+```
 
 ## Testing the API with Postman
 - Open Postman and create a new POST request.
